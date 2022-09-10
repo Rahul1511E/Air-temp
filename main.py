@@ -18,7 +18,7 @@ def loc():
     global lon
     global la7
     global la9
-    g = geocoder.bing(a.get(), key='ApJOpbd91RkruF7cDqJUoQxXyL6GRb1bixyMUHDlbBZ0DIiTIobA7h6aLCz6joma')
+    g = geocoder.bing(a.get(), key='Api key')
     results = g.json
     lat = results['lat']
     lon = results['lng']
@@ -36,7 +36,7 @@ def loc():
             'params': ','.join(['humidity', 'airTemperature']),
         },
         headers={
-            'Authorization': '87c5d39a-3057-11ed-93b0-0242ac130002-87c5d3f4-3057-11ed-93b0-0242ac130002'
+            'Authorization': 'Api key'
         }
     )
     data = response.json()
